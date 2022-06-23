@@ -1,0 +1,33 @@
+<!--pages/text/text.wxml-->
+<view class="city-page">
+    <scroll-view class="city-scrollView" scroll-y="true" scroll-into-view="{{scrollTopId}}"
+        scroll-with-animation="true" enable-back-to-top="true" bindscroll="handleScroll">
+        <view class="city-item" id="current">
+            <view class="city-sub-item city-text v-flex city-sub-location" bindtap="handleClickLocation">
+                <image src="{{images.location}}" mode="widthFix" class="location-image"></image>
+                当前位置
+                <text class="city-sub-text">{{locationCity}}</text>
+            </view>
+        </view>
+        <view class="city-item listGroup" wx:for="{{cityList}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
+            <view class="city-sub-item city-py" id="{{idx}}">{{idx}}</view>
+            <view class="city-sub-item city-text" wx:for="{{group}}" wx:key="key" 
+                data-fullname="{{item.fullname}}" data-lat="{{item.location.lat}}" 
+                data-lng="{{item.location.lng}}" bindtap="selectCity">{{item.fullname}}</view>
+        </view>
+    </scroll-view>
+    
+    <!-- 右侧字母表 -->
+    <view class="city-py-label">
+        <view wx:for="{{cityPy}}" wx:key="index" data-id="{{item}}" data-index="{{index}}"
+            bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindtouchmove="handleTouchMove"
+            class="{{currentIndex==index?'text-primary':''}}">{{item}}</view>
+    </view>
+    
+    <!-- 当前触摸的字母 -->
+    <view class="v-flex v-shadow city-single-py" wx:if="{{hidden}}">
+        <view>{{scrollTopId}}</view>
+    </view>
+</view>
+
+

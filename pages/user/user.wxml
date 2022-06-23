@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="user" bindtap="ejectPopup">
+				<view class="user-name">
+					<view wx:if="{{userInfo}}" class="view1">未登录/注册</view>
+					<view  wx:if="{{!userInfo}}" class="view">{{userData.phone}}</view>
+					<view wx:if="{{userInfo}}" class="view2">点击头像登录/注册</view>
+				</view>
+				<view class="suer-pic">
+					<image wx:if="{{userInfo}}" src="../../images/operate.png" mode=""></image>
+					<image wx:else src="../../images/senior.png" mode=""></image>
+				</view>
+			</view>
+</view>
+<view class="usersetitem">
+  <navigator class="item-cells" url="../collection/collection">
+    <view class="item-cell item-cell-access" >
+      <view class="item-cell-bd">
+        <text>我的收藏</text>
+      </view>
+      <view class="item-cell-ft"></view>
+    </view>
+  </navigator>
+  <navigator class="item-cells" url="../setUp/setUp">
+    <view class="item-cell item-cell-access" >
+      <view class="item-cell-bd">
+        <text>我的设置</text>
+      </view>
+      <view class="item-cell-ft"></view>
+    </view>
+  </navigator>
+  
+</view>
+<view class="item-cells ext-box" hidden='{{usersetting}}'>
+  <view class="item-cell item-cell-access" bindtap='signOut'>
+    <view class="item-cell-bd">
+      <text>退出当前账号</text>
+    </view>
+  </view>
+</view>

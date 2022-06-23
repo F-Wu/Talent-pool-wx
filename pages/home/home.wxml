@@ -1,0 +1,101 @@
+<scroll-view>
+	<view class="container">
+		<view class="top">
+			<view class="header">
+				<text class="header__text-title">你与牛人其实只差一次聊天</text>
+				<text class="header__text-subtitle">人才库</text>
+			</view>
+			<!-- 选择 -->
+			<view class="choose">
+				<view class="{{chooseIndex == 0 ? 'categoryNameActive':''}}">
+					<!-- 最新、最热 -->
+					<picker mode="selector" range="{{mostPicker}}" bindchange="pickerMost" value="{{index}}">
+						<view>{{mostPicker[index]}} <text class="iconfont icon-xiangxia" style="font-size: 25rpx;"></text></view>
+					</picker>
+				</view>
+				<!-- 地区 -->
+				<view bindtap="goCity" class="{{chooseIndex == 1?'categoryNameActive':''}}">
+					<text class="text-l ">{{search.city}} <text class="iconfont icon-xiangxia" style="font-size: 25rpx;">
+						</text></text>
+				</view>
+				<!-- 职业 -->
+				<view bindtap="goCollect" class="{{chooseIndex == 2?'categoryNameActive':''}}">
+					<text class="text-l ">{{search.collect}} <text class="iconfont icon-xiangxia" style="font-size: 25rpx;">
+						</text></text>
+				</view>
+			</view>
+
+		</view>
+		<!-- 展示 -->
+		<view class="exhibition" wx:if="{{data==true}}">
+			<view class="perlist" wx:if="{{index==0}}">
+				<view class="perlist-info" wx:for="{{List}}" wx:key="{{index}}" wx:for-item="item" data-id='{{item.id}}' bindtap="navigateTo">
+					<view class="per-l">
+						<view class="name">
+							{{item.name}}
+						</view>
+						<view class="situation">
+							<text>{{item.age}}</text>
+							<text class="solls">|</text>
+							<text>{{item.education}}</text>
+							<text class="solls">|</text>
+							<text>{{item.expect}}</text>
+						</view>
+						<view class="experience">
+							<text class="iconfont icon-gongwenbao" style="color: #C8C7CC;margin-right: 20rpx;"></text>
+							<text>{{item.education_name}}</text>
+						</view>
+						<view class="skill">
+							<text>{{item.work}}</text>
+						</view>
+						<view class="introduce">
+							熟练运用cad、酷家乐,为人诚实严谨，希望能多积累经验，快速成长熟练运用cad、酷家乐,为人诚实严谨，希望能多积累经验，快速成长
+						</view>
+					</view>
+					<view class="perimg">
+						<image src="{{item.img}}" mode=""></image>
+					</view>
+					<view class="perxx iconfont icon-x">
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 推荐 -->
+		<view class="perlist" wx:if="{{index==1}}">
+				<view class="perlist-info" wx:for="{{List1}}" wx:key="{{index}}" wx:for-item="item" data-id='{{item.id}}' bindtap="navigateTo">
+					<view class="per-l">
+						<view class="name">
+							{{item.name}}
+						</view>
+						<view class="situation">
+							<text>{{item.age}}</text>
+							<text class="solls">|</text>
+							<text>{{item.education}}</text>
+							<text class="solls">|</text>
+							<text>{{item.expect}}</text>
+						</view>
+						<view class="experience">
+							<text class="iconfont icon-gongwenbao" style="color: #C8C7CC;margin-right: 20rpx;"></text>
+							<text>{{item.education_name}}</text>
+						</view>
+						<view class="skill">
+							<text>{{item.work}}</text>
+						</view>
+						<view class="introduce">
+							熟练运用cad、酷家乐,为人诚实严谨，希望能多积累经验，快速成长熟练运用cad、酷家乐,为人诚实严谨，希望能多积累经验，快速成长
+						</view>
+					</view>
+					<view class="perimg">
+						<image src="{{item.img}}" mode=""></image>
+					</view>
+					<view class="perxx">
+							<image src="../../images/huo.png" mode="" style="width: 30rpx;height: 30rpx;" />
+							<text>{{item.number}}</text>
+						</view>
+				</view>
+			</view>
+		<view class="bottomout">
+			到底了...
+		</view>
+	</view>
+</scroll-view>

@@ -1,0 +1,6 @@
+<!--pages/setUp/setUp.wxml-->
+<view class="content">
+		<!-- <image src="../../static/undefined.png"></image> -->
+			<text>查看联系方式</text>
+			 <switch class="switch" bindchange="change" checked="{{checked}}"></switch >
+	</view>

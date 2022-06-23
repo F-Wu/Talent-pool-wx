@@ -1,0 +1,127 @@
+/**app.wxss**/
+.container {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+} 
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+.user{
+  margin: 20rpx auto;
+  width: 95%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  .user-name{
+    color: #000000;}
+    .view1{
+      color: #000000;
+      font-size: 50rpx;
+      margin: 10rpx 0;
+    }
+    .view{
+      color: #000000;
+      font-size: 50rpx;
+      margin: 10rpx 0;
+    }
+    .view2{
+      font-size: 27rpx;
+    }
+  .suer-pic{
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+  }
+    image{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+    }
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #000;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.usersetitem{
+  background-color: rgba(227, 228, 228, .6);
+  padding: 5rpx 0;
+}
+.item-cells{
+  border: 1px solid #fff !important;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #666;
+  margin: 20rpx 0rpx;
+}
+.item-cell{
+padding: 36rpx 48rpx 36rpx 52rpx;
+display: flex;
+}
+.item-cell-bd{
+flex: 1;
+}
+.item-cell-ft{
+position: relative;
+}
+.item-cell-access .item-cell-ft::after{
+  content: " ";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 4rpx;
+  margin-top: -10rpx; 
+}  
+.ext-box{
+  margin-top: 35rpx !important;
+  font-size: 35rpx;
+  display:block;
+  color:#666;
+  font-size:28rpx;
+  font-weight:bold;
+  margin-bottom:20rpx;
+  /* background:#53cac3; */
+  background-color: rgba(227, 228, 228, .6);
+  width:80%;
+  border-radius:8px;
+  text-align:center;
+  margin:0 auto;
+}
+.ext-box .item-cell-bd{
+  text-align: center;
+}

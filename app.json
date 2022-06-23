@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/login/logs",
+    "pages/user/user",
+    "pages/candidates/candidates",
+    "pages/occupation/occupation",
+    "pages/collection/collection",
+    "pages/selectCity/selectCity",
+    "pages/text/text",
+    "pages/setUp/setUp"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#53cac3",
+    "navigationBarTitleText": "人才招聘",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#666666",
+    "selectedColor": "#00b38a",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_curr.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/icon_user.png",
+        "selectedIconPath": "images/icon_user_curr.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

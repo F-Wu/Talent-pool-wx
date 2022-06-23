@@ -1,0 +1,45 @@
+<!--pages/city/city.wxml-->
+<view class='city_box' style='{{styles}}'>
+    <!-- 左边 -->
+    <view class="index">
+        <scroll-view scroll-y="true" class="SV_categoryTitle">
+            <view class='categoryTitle'>
+                <view class='categoryName' bindtap="goTop" hidden='{{!floorstatus}}'  >#</view>
+                <view class='categoryName' wx:for='{{cityData}}' wx:key='index' catchtap='letterTap' 
+                    class="{{categoryNameActive == index?'categoryNameActive':'categoryName'}}" data-index='{{index}}' data-id="{{cityData[index].letter}}">
+                    {{cityData[index].letter}}</view>
+            </view>
+        </scroll-view>
+    </view>
+        <!-- 右边 -->
+    <view class='city_left'  id="current">
+        <scroll-view scroll-y scroll-with-animation scroll-into-view='{{cityListName}}' style="width:80%;height:{{customAttribute}}px" scroll-top='{{topNum}}'>
+            <view class='section' data-types='locate' catchtap='cityTap'>
+                <text class='city-title'>自动定位</text>
+                <view class='city_locate_text' style='{{!locateCity&&"color:#33b9ff;"}}'>{{locateCity||'点击定位'}}</view>
+            </view>
+            <view class="section" style="margin-bottom: 40px;" bindtap="empty">
+                <text class='city_locate_text' style=" left: 0rpx;">清空当前选择</text>
+            </view>
+            <view class="section" id="hot">
+                <view class='city-title'>热门城市</view>
+                <view class='city-list'>
+                    <view class='city-item hotItem' wx:for='{{newcity}}' wx:key='this' data-types='new'
+                        catchtap='cityTap' data-val='{{item}}'>{{item}}</view>
+                </view>
+                
+            </view>
+            <view class='section'>
+                <block wx:for='{{cityData}}' wx:key='this' wx:for-item='letterItem' wx:for-index='letterIndex'>
+                    <view class='letter' id='{{letterItem.letter}}'>{{letterItem.letter}}</view>
+                    <view class="city-list">
+                        <view class='city-item' wx:for='{{letterItem.list}}' wx:key='this' data-types='list'
+                            catchtap='cityTap' data-index='{{index}}' data-val='{{item}}'>{{item}}</view>
+                    </view>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+
+
+</view>

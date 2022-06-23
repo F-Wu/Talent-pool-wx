@@ -1,0 +1,2 @@
+<!--pages/selectCity/selectCity.wxml-->
+<citylist styles='max-height:{{winHeight}};' bindcitytap='cityTap' customAttribute="{{winHeight}}"></citylist>

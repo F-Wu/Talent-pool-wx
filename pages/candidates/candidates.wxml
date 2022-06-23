@@ -1,0 +1,138 @@
+<!--pages/candidates/candidates.wxml-->
+<!-- 个人简历详情 -->
+  <view class="onliner">
+<!-- 基础信息 -->
+    <view class="myname">
+      <view class="name">
+        <view><text>熊大</text></view>
+        <view>web前端开发·广西柳州熊二科技</view>
+      </view>
+      <view class="img">
+        <image src="{{head}}" mode=""></image>
+      </view>
+    </view>
+    <!-- 状态 -->
+    <view class="state">
+      <view class="state-title">
+        离职-随时到岗
+      </view>
+      <view class="personal">
+        <view><text class="iconfont icon-gongwenbao1" style="font-size: 30rpx;"></text><text>1年以内经验</text></view>
+        <view><text class="iconfont icon-xueshimao" style="font-size: 30rpx;"></text><text>大专</text></view>
+        <view><text class="iconfont icon-shengrix" style="font-size: 30rpx;"></text><text>20岁</text></view>
+      </view>
+      <view class="statetext">
+        熟悉掌握html5,css3,JavaScriptjquery等专业技能。
+        熟悉Vue框架、uni-app框架、微信小程序开发和Bootstrap框架、vant组件、Element插件。
+        熟悉git与svn版本管理。在校期间担任过前端开发小组组长，积极参加社团各种活动个比赛,我性格比较活泼开朗,做事认真,执着。
+        对前端新技术，框架有着强烈兴趣。
+      </view>
+      <view class="enclosure">
+        <view class="iconfont icon-DOCtubiao" style="font-size: 80rpx; color: #45CFFE;margin-left: 20rpx;">
+        </view>
+        <view class="enctext">
+          <view>该应聘者已上传附件简历</view>
+          <text>沟通获取</text>
+        </view>
+      </view>
+    </view>
+    <!-- 期望 -->
+    <view class="expect">
+      <view class="expect-top">
+        <text class="exp-info"><text class="iconfont icon-dian"
+            style="color: #45CFFE;margin-right: 5rpx;"></text>求职期望</text>
+      </view>
+      <view class="expect-lower">
+        <view class="lower-l">
+          <view><text>ui设计师</text></view>
+          <view><text>柳州</text><text>行业不限</text></view>
+        </view>
+        <view><text style="font-size: 35rpx; font-weight: 700; color: #45CFFE;">3-6k</text></view>
+      </view>
+    </view>
+    <!-- 经验 -->
+    <view class="experience">
+      <view class="expect-top">
+        <text class="exp-info"><text class="iconfont icon-dian"
+            style="color: #45CFFE;margin-right: 5rpx;"></text>工作经历</text>
+      </view>
+      <view class="corporatename">
+        <text>广西柳州市熊大科技公司</text>
+        <text>2020.05-2121.05</text>
+      </view>
+      <view class="position">
+        <text>web前端开发工程师</text><text>技术部</text><text>实习</text>
+      </view>
+      <view class="jobcontent">
+        内容:主要负责网站页面,移动端app页面,小程序页面的美化与开发。
+      </view>
+      <view class="skill">
+        <view>JavaScript</view>
+        <view>HTML5</view>
+        <view>css3</view>
+      </view>
+    </view>
+    <!-- 项目经历 -->
+    <view class="experience">
+      <view class="expect-top">
+        <text class="exp-info"><text class="iconfont icon-dian"
+            style="color: #45CFFE;margin-right: 5rpx;"></text>项目经历</text>
+      </view>
+      <view class="corporatename">
+        <text>广西柳州市熊大大熊小程序</text>
+        <text>2020.05-2121.05</text>
+      </view>
+      <view class="position">
+        <text>开发部</text>
+      </view>
+      <view class="jobcontent">
+        内容:给电充电桩小程序是一款针对于新能源汽车充电而开发的微信小程序。主要是用于车主来充电新能源款针对于新能源汽车充电而开发的微信小程序。主要是用于车主来充电新能源
+      </view>
+    </view>
+    <!-- 教育 -->
+    <view class="education">
+      <view class="expect-top">
+        <text class="exp-info"><text class="iconfont icon-dian"
+            style="color: #45CFFE;margin-right: 5rpx;"></text>教育经历</text>
+      </view>
+      <view class="ednname">
+        <view class="ednname-l">
+          <view>广西科技大学</view>
+          <view>计算机信息管理<text>本科</text></view>
+        </view>
+        <view class="time">2018-2022<text class="iconfont icon-xiangyou" style="font-size: 28rpx;"></text></view>
+      </view>
+    </view>
+    <view class="education">
+      <view class="expect-top">
+        <text class="exp-info"><text class="iconfont icon-dian"
+            style="color: #45CFFE;margin-right: 5rpx;"></text>资格证书</text>
+      </view>
+      <view class="certificate">
+        <text v-for="(item,index) in 2" :key="index">NCIE全国信息化工程师项目证书</text>
+      </view>
+    </view>
+    <view class="custom">
+      <view class="cus-title">
+        <text class="iconfont icon-dian" style="color: #45CFFE;margin-right: 5rpx;"></text>设计作品
+      </view>
+      <view class="crayimg">
+        <view class="cray">
+          <image src="https://alifei03.cfp.cn/creative/vcg/800/new/VCG21673ac92c8-VHZ.jpg" mode=""></image>
+        </view>
+        <view class="cray">
+          <image src="https://alifei03.cfp.cn/creative/vcg/800/new/VCG21673ac92c8-VHZ.jpg" mode=""></image>
+        </view>
+        <view class="cray">
+          <image src="https://alifei03.cfp.cn/creative/vcg/800/new/VCG21673ac92c8-VHZ.jpg" mode=""></image>
+        </view>
+        <view class="cray">
+          <image src="https://alifei03.cfp.cn/creative/vcg/800/new/VCG21673ac92c8-VHZ.jpg" mode=""></image>
+        </view>
+      </view>
+
+    </view>
+    <view class="previews">
+      <view class="communicate">立即沟通</view>
+    </view>
+  </view>

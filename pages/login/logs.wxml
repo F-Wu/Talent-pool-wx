@@ -1,0 +1,22 @@
+<!--logs.wxml-->
+	<view class="content">
+		<view class="title">手机号登陆/注册</view>
+		<view class="uni-form-item uni-column">
+			<input type="tel" class="uni-input" name="" placeholder="请输入手机号" model:value="{{phone}}" />
+		</view>
+		<view class="uni-form-item uni-column column-with-btn">
+			<input type="phone" class="uni-input" name="" placeholder="请输入密码" model:value="{{password}}" />
+		</view>
+		<view bindtap="iszhuce" wx:if="{{!zuc}}">
+			<p>注册</p>
+		</view>
+		<view bindtap="iszhuce" wx:else>
+			<p>登录</p>
+		</view>
+		<button type="primary" bindtap="login" wx:if="{{!zuc}}">登陆</button>
+		<button type="primary" bindtap="add" wx:else>注册</button>
+		<view class="rule">
+			<radio style="transform:scale(0.7)" value="sada" checked="{{actil}}" color="#45CFFE" bindtap="clickRad" />
+			<text>人才库<text style="color: #45CFFE;">《用户协议》</text>和<text style="color: #45CFFE;">《个人信息保护政策》</text></text>
+		</view>
+	</view>

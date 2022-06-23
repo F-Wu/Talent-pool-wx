@@ -1,0 +1,160 @@
+<view class="news">
+		<!-- <view class="bgm">
+			<image :src="information[0].img" style="width: 100%;"></image>
+		</view> -->
+		<view class="onliner">
+
+			<!-- 个人信息 -->
+			<view class="information" wx:for="{{information}}" wx:key="{{index}}" wx:for-item="item" >
+				<view class="myname">
+					<view class="name">
+						<view class="name1"><text>{{item.name}}</text></view>
+						<view class="name2">{{item.work}}·{{item.education_name}}</view>
+					</view>
+					<view class="img">
+						<image src="{{item.img}}" mode=""></image>
+					</view>
+				</view>
+				<view class="state">
+					<view class="state-title">
+						离职-随时到岗
+					</view>
+					<view class="personal">
+						<view><text class="iconfont icon-gongwenbao1"
+								style="font-size: 30rpx;"></text><text>{{item.expect}}</text>
+						</view>
+						<view><text class="iconfont icon-xueshimao"
+								style="font-size: 30rpx;"></text><text>{{item.education}}</text></view>
+						<view><text class="iconfont icon-shengrix"
+								style="font-size: 30rpx;"></text><text>{{item.age}}岁</text>
+						</view>
+					</view>
+					<view class="statetext">
+						熟悉掌握html5,css3,JavaScriptjquery等专业技能。
+						熟悉Vue框架、uni-app框架、微信小程序开发和Bootstrap框架、vant组件、Element插件。
+						熟悉git与svn版本管理。在校期间担任过前端开发小组组长，积极参加社团各种活动个比赛,我性格比较活泼开朗,做事认真,执着。
+						对前端新技术，框架有着强烈兴趣。
+					</view>
+					<view class="enclosure">
+						<view class="iconfont icon-DOCtubiao"
+							style="font-size: 80rpx; color: #45CFFE;margin-left: 20rpx;">
+						</view>
+						<view class="enctext">
+							<view>该应聘者已上传附件简历</view>
+							<text>沟通获取</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 求职期望 -->
+			<view class="expect">
+				<view class="expect-top">
+					<text class="exp-info "><text class="iconfont icon-dian"
+							style="color: #45CFFE;margin-right: 5rpx;"></text>求职期望</text>
+				</view>
+				<view class="expect-lower" wx:for="{{expect}}" wx:key="index" wx:for-item="item" >
+					<view class="lower-l">
+						<view class="lower-l-1"><text>{{item.occupation}}</text></view>
+						<view class="lower-l-2"><text>{{item.city}}</text><text></text></view>
+					</view>
+					<view><text style="font-size: 35rpx; font-weight: 700; color: #45CFFE;">{{item.salary}}</text>
+					</view>
+				</view>
+			</view>
+
+			<!-- 工作经历 -->
+			<view class="experience">
+				<view class="expect-top">
+					<text class="exp-info"><text class="iconfont icon-dian"
+							style="color: #45CFFE;margin-right: 5rpx;"></text>个人经历</text>
+				</view>
+				<view wx:for="{{work_experience}}" wx:key="index" wx:for-item="item" >
+					<view class="corporatename">
+						<text class="corporatename1">{{item.company}}</text>
+						<text class="corporatename2">{{item.data}}</text>
+					</view>
+					<view class="position">
+						<text>{{item.position}}</text>
+					</view>
+					<view class="jobcontent">
+						{{item.job_content}}
+					</view>
+					<view class="achievement" wx:if="{{item.achievement}}">
+						<text class="achievement1">工作成就</text>
+						<view class="jobcontent">{{item.achievement}}</view>
+					</view>
+				</view>
+			</view>
+
+			<!-- 项目经历 -->
+			<view class="experience">
+				<view class="expect-top">
+					<text class="exp-info"><text class="iconfont icon-dian"
+							style="color: #45CFFE;margin-right: 5rpx;"></text>项目经历</text>
+				</view>
+				<view wx:for="{{project}}" wx:key="index" wx:for-item="item" >
+					<view class="corporatename">
+						<text class="corporatename1">{{item.project_name}}</text>
+						<text class="corporatename2">{{item.data}}</text>
+					</view>
+					<view class="position">
+						<text class="position3">{{item.role}}</text>
+					</view>
+					<view class="jobcontent">
+						{{item.describet}}
+					</view>
+				</view>
+			</view>
+
+			<!-- 教育经历 -->
+			<view class="education">
+				<view class="expect-top">
+					<text class="exp-info"><text class="iconfont icon-dian"
+							style="color: #45CFFE;margin-right: 5rpx;"></text>教育经历</text>
+				</view>
+				<view class="ednname" wx:for="{{education}}" wx:key="index" wx:for-item="item" >
+					<view class="ednname-l">
+						<view class="ednname-l-1">{{item.project_name}}</view>
+						<view class="ednname-l-2">{{item.describe}}<text class="position3">{{item.role}}</text></view>
+					</view>
+					<view class="time">{{item.data}}
+					</view>
+				</view>
+			</view>
+			<view class="education">
+				<view class="expect-top">
+					<text class="exp-info"><text class="iconfont icon-dian"
+							style="color: #45CFFE;margin-right: 5rpx;"></text>资格证书</text>
+				</view>
+				<view class="certificate" wx:for="{{education}}" wx:key="index" wx:for-item="item" > 
+					<text>{{item.education}}</text>
+				</view>
+			</view>
+			<!-- 设计作品 -->
+			<view class="custom">
+				<view class="cus-title">
+					<text class="iconfont icon-dian" style="color: #45CFFE;margin-right: 5rpx;"></text>设计作品
+				</view>
+				<!-- 轮播图展示 -->
+				<view class="crayimg">
+
+					<!-- 需要判断是Img 还是视频 -->
+					<view class="cray" wx:for="{{work_experience}}" wx:key="index" wx:for-item="item" >
+						<image src="{{item.work_img}}" mode="" bindtap="clickImg" data-img="{{item.work_img}}" />
+					</view>
+				</view>
+				<video id="myVideo" src="{{work_experience[0].video}}"></video>
+
+			</view>
+
+		</view>
+		<view class="previews">
+			<!-- 收藏 -->
+			<u-icon name="{{num?'heart-fill':'heart'}}" color="#ffaa00" size="28" bindtap="collect"></u-icon>
+			<view class="communicate" bindtap="collection" wx:if="{{houde==true}}">立即沟通</view>
+			<view class="communicate" wx:else>
+				<text wx:if="{{status==true}}" class="communicate">{{contact}}</text>
+				<text wx:else class="communicate"> 联系方式隐藏</text>
+			</view>
+		</view>
+	</view>

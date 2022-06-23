@@ -1,0 +1,38 @@
+<view>
+		<view class="perlist" wx:if="{{List.length !=0}}">
+			<view class="perlist-info" wx:for="{{List}}" wx:key="index" bindtap="navigateTo" data-id="{{item.id}}" wx:for-item="item">
+				<view class="per-l">
+					<view class="name">
+						{{item.name}}
+					</view>
+					<view class="situation">
+						<text>{{item.age}}</text>
+						<text class="solls">|</text>
+						<text>{{item.education}}</text>
+						<text class="solls">|</text>
+						<text>{{item.expect}}</text>
+					</view>
+					<view class="experience">
+						<text class="iconfont icon-gongwenbao" style="color: #C8C7CC;margin-right: 20rpx;"></text>
+						<text>{{item.education_name}}</text>
+					</view>
+					<view class="skill">
+						<text>{{item.work}}</text>
+					</view>
+					<view class="introduce">
+						熟练运用cad、酷家乐,为人诚实严谨，希望能多积累经验，快速成长熟练运用cad、酷家乐,为人诚实严谨，希望能多积累经验，快速成长
+					</view>
+				</view>
+				<view class="perimg">
+					<image src="{{item.img}}" mode=""></image>
+				</view>
+				<view class="perxx">
+					<image src="../../images/huo.png" mode="" style="width: 30rpx;height: 30rpx;" />
+					<text>{{item.number}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="undefindIMG" wx:else>
+			<image src="../../images/undefined.png"></image>
+		</view>
+	</view>

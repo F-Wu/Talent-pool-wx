@@ -1,0 +1,16 @@
+/* pages/setUp/setUp.wxss */.content{
+		display: flex;
+		height: 50px;
+		font-size: 20px;
+		align-items: center;/*垂直居中*/
+		position: relative;
+		border-bottom: #cbd3df 0.5px solid;
+		/* background-color: #007AFF; */
+	}
+	text{
+			line-height: 50px;
+		}
+		.switch{
+			position: absolute;
+			right: 20px;
+		}
